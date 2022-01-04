@@ -61,5 +61,51 @@ console.log(checkingObj instanceof Object); //Will return true when Object or, F
 
 checkingObj(5, 6); // Jokhon call kori tokhon koita arguments ache ta receive kore niye nei
 
-// Jokhon Object er property hishebe function define korbo, tokhon sheta ke bole Method to the Object
+//...
+//...
+// Jokhon Object er property hishebe function define korbo, tokhon sheta ke bole Method to the Object..For Example,
+const me = {
+  name: "Jitu",
+  activities: function () {
+    //Ekhane Function=> method
+    console.log("Playing");
+  },
+};
+
 // Je function ta new Object create korar jonne design kora hoi, sheta k bole Object Constructor
+function Person(name, id) {
+  this.name = name;
+  this.id = id;
+}
+const jitu = new Person("Jitu", "20-***-3");
+console.log(jitu);
+/*
+ * Title: Uporer function constructor je shetar proof.. Uporer ta same evabe likha jai
+        class Person {
+            constructor(name, id) {
+                this.name = name;
+                this.id = id;
+            }
+        }
+ */
+
+// Arrow Functions
+//In Traditional
+function a(x, y) {
+  return x + y;
+}
+console.log("In Traditional Function", a(2, 3));
+
+// In Arrow //1 line er statement er return e return keyword tao dewa lagena
+const b = (x, y) => x + y;
+console.log("In Arrow Function", b(3, 4));
+
+/*
+ * Title: Arrow Functions
+ * Description:
+ * Arrow Function e kono This er value Global/Window bujhai..Oi function nijei this hishebe thakena...Means they don't have their own this
+ * Arrow functions Hoisted na.. Tai define korar porei call korte hobe
+ * Signle Statement line holei Curly-brackets{} and return keyword baad dewa jabe..
+ * Const use kora better var/let theke
+ *
+ */
