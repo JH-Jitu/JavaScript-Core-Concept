@@ -1,3 +1,6 @@
+// Hoisting hocche JavaScript er ekta default behavior jeta declaration gulake current scope er upore move kore
+// Hoisting is the default behavior of moving declarations to the top of the current scope
+
 // Details: https://zonayed.js.org/basic/post-14
 
 summation(5, 6);
