@@ -30,6 +30,7 @@ Person.prototype = {
 const sakib = new Person("Sakib", 21, "Bangladesh");
 /*
  * Title: new & this keyword
+ * JAVA te amra Directly Class theke object make kori.. But JavaScript e amra Class er Constructor theke object make kori
  * Person e this kore dewar shathe shathe ekhane 'new' keyword ante hobe.. jeta 'this' k point kore
  * classBased language (OOP based like Java, C#, c++ er oop te) evabe 'new' keyword diye Class theke Object make kora hoi.
  * JavaScript eo ES6 (ES2015) theke Class (OOP) support kore.. jetao in the backend prototype niyei kaaj kore..

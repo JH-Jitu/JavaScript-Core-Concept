@@ -1,8 +1,11 @@
-// Type of Binding =>
-// 1. Implicit Binding Binding
-// 2. Explicit Binding
-// 3. New Binding
-// Window Binding
+/*
+ * Title: Type of Binding
+    1. Implicit Binding Binding
+    2. Explicit Binding
+    3. New Binding
+    4. Window Binding
+ * 
+ */
 
 //................ Implicit Binding .........................
 
@@ -11,7 +14,7 @@ var jitu = {
   name: "Jitu",
   age: 21,
   printName: function () {
-    console.log(this.name);
+    console.log(this.name); // ekhane 'this' holo ful 'jitu object' tai
   },
 };
 
