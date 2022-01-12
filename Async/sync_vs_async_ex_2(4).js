@@ -2,11 +2,18 @@
 
 // In Asynchronous way (More readable code from=> SynchronousVSAsynchronous2.js)
 
+const open = true;
+const chefAvailable = true;
+
 const takeOrder = (customer) => {
   console.log(`Taking Order from Customer ${customer}`);
 
   const promise = new Promise((resolve, reject) => {
-    resolve(customer);
+    if (open) {
+      resolve(customer);
+    } else {
+      reject("Restaurant is closed now!");
+    }
   });
   return promise;
 };
@@ -15,12 +22,16 @@ const processedOrder = (customer, callback) => {
   console.log(`Processing Order from Customer ${customer}`);
 
   const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log(`Cooking completed for ${customer}`);
-      console.log(`Order processed of ${customer}`);
+    if (chefAvailable) {
+      setTimeout(() => {
+        console.log(`Cooking completed for ${customer}`);
+        console.log(`Order processed of ${customer}`);
 
-      resolve(customer);
-    }, 3000);
+        resolve(customer);
+      }, 3000);
+    } else {
+      reject("Chef not available right now!");
+    }
   });
   return promise;
 };
@@ -32,11 +43,16 @@ const completedOrder = (customer) => {
   return promise;
 };
 
-const finishingProcess = async () => {
-  await takeOrder("Customer-1");
-  await processedOrder("Customer-1");
-  msg = await completedOrder("Customer-1");
-  console.log(msg);
+const finishingProcess = async (customer) => {
+  try {
+    await takeOrder(customer);
+    await processedOrder(customer);
+    msg = await completedOrder(customer);
+    console.log(msg);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-finishingProcess();
+finishingProcess("customer-1");
+// finishingProcess("customer-2");
