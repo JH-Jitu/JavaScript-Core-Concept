@@ -52,3 +52,18 @@ console.log(summation(4));
  * sum(0) + 1 + 2 + 3 + 4 = 10
  *
  */
+
+/*
+ * Title: Why Recursion not useful for big values
+ * Description: As, Recursion can't handle big values. Because, there is a call-stack in our browser runtime environment. and jokhon ei amra call-stack e recursion work korte jai tokhon call-stack Last-in-First-Out evabe function guloke call korte thake.. jar fole 'Range Error' dei ar Maximum Call size exceeded er kotha bole..
+ *
+ * Jodi Loop kore same kaaj kori, taholeo  kaaj korbe tobe tate execution time onek beshi nibe..
+ *
+ * That's why, amra cpu ke use kore kaaj korte pari.. For example, amra Differentiation er Induction er formula khataite pari.. => sum(n) = (n*(n+1))/2
+ * sum(4) = (4*(4+1))/2 = 20/2 = 10
+ *
+ */
+
+const number = 10;
+const result = (number * (number + 1)) / 2;
+console.log(result);
