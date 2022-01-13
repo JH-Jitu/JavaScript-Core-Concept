@@ -14,9 +14,9 @@ for (let j = 0; j < 3; j++) {
   // let hocche block scope, jar fole j ta only for-loop er vitore kaaj korbe..
   // Ekhane var/let dile same output dibe..
 
-  // setTimeout er vitore jei function ta ache she function ta call hobe, for loop jotobar cholbe totobar
+  // setTimeout er vitore jei function ta ache she function ta 3second por call hobe, for-loop jotobar cholbe totobar
   setTimeout(() => {
-    console.log("Asynchronous (let):", j); // setTimeout er vitore jokhon load ta cholche, prothom j=0 jokhon, tokhon setTimeout function ta call hocche.. Tokhon take obosshoi take closure use kore j er reference ta dekhe nite hobe.. shekhan theke j er value pawa jabe.. Karon j hocche bairer scope e.. ar setTimeout alada ekta scope... jeta web-api theke eshe, pore j er reference check kore value return korbe
+    console.log("Asynchronous (let):", j); // setTimeout er vitore jokhon load ta cholche, prothom j=0 jokhon, tokhon setTimeout function ta execute howa shuru korbe.. Tokhon obosshoi setTimeout-ke closure use kore 'j' er reference ta set kore nite hobe...Karon j hocche setTimeout er parent scope e.. .erpor Loop shesh hoe jokhon setTimeOut er vitorer function ta 3second por 'web-api' theke eshe call hobe, tokhon closure theke 'j' er value refer kore pabe...
 
     // let jehetu block scope, tai jokhon web-api theke eshe j nijei loop er moddhe increment hoe geche.. mane new j er value create hoe sheta refer korche Closure e.. to jokhon Closure reference check korbe tokhon reference er moddhe block scope er karone loop er moddhe 'j' increment hoe change hocche jehetu, tai dekha jabe, prottekbar incremented value ta store hoe geche.. r prottekbar incremented value ta she return korbe.. r ete closure e 'j' prottekbar alada alada value ke refer korai, 'j' shei maan gula alada alada vabe output e show korbe
 
