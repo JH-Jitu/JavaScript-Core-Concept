@@ -68,3 +68,5 @@ console.log(document.nodeName); // nodeName of the document node is always #docu
 
 // Kono ekta attribute er name ki dewa hoeche ta access korte chaile..
 console.dir(document.querySelector("#conv").attributes[0].nodeValue);
+
+// Reference: https://www.w3schools.com/js/js_htmldom_navigation.asp
