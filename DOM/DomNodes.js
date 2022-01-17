@@ -5,7 +5,16 @@ const divOfDemo = document.getElementById("demo");
 const paraTag = document.createElement("p");
 const insideTag = document.createTextNode("World: I'm Fine. You?");
 
-paraTag.appendChild(insideTag); // <p>World: I'm Fine. You?</p> //=> appendChild korar karone paraTag er modde insideTag ta child akare chole gese
+paraTag.className = "world-chat";
+paraTag.setAttribute("id", "world-chat");
+
+// paraTag.appendChild(insideTag); // <p>World: I'm Fine. You?</p> //=> appendChild korar karone paraTag er modde insideTag ta child akare chole gese
+
+// paraTag.append(insideTag); // <p>World: I'm Fine. You?</p> //=> append korar karoneo paraTag er modde insideTag ta child akare chole gese.. tobe append() e multiple argument diye multiple element add kora jai... For example,
+const spanTag = document.createElement("span");
+const insideSpanTag = document.createTextNode(" Bangladesh");
+spanTag.append(insideSpanTag);
+paraTag.append(insideTag, spanTag, document.createTextNode(" is not well")); // Ei je ekhane multiple argument pass kora hoeche... jegula paraTag er moddhe giye append hobe..
 
 divOfDemo.appendChild(paraTag); //paratag er moddhe appendChild korar por ekhon insideTag o acche.. Tai Paratag k abar jodi divOfDemo er child akare di, tobe eta demo id er child hishebe add hoe display te dekhabe
 
@@ -34,4 +43,4 @@ const insideTagForReplace = document.createTextNode(
 
 paraTagForReplace.appendChild(insideTagForReplace);
 
-divOfDemo.replaceChild(paraTagForReplace, p1Tag[p1Tag.length - 1]);
+divOfDemo.replaceChild(paraTagForReplace, p1Tag[p1Tag.length - 1]); // Last element er index holo (length-1) Last element er shathe replace korar jonne p1Tag[p1Tag.length - 1] use kora hoeche..
