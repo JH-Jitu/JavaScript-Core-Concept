@@ -1,0 +1,36 @@
+How the web works?
+
+=> Jokhon amra https://www.facebook.com => ekta url
+=> URL => Uniform Resource Location => basically, eta hocche Internet e kichu Uniform Resource Locate korar way
+
+=> Resource hote pare * Web Pages (HTML DOCUMENTS), * Images, * Video Files, Fonts and so on
+
+=> jokhon amra uporer link e click kori, tokhon => 2ta piece kaaj kore muloto.. ekta hocche amader *Browser or eta ke Client o bole, arekta hocche *Computer jetate amader dewa link ta host kora ache or etake server/web server o bole 
+=> Client server er kache request pathai.. ar server tokhon oi onujayi response kore shob thik thak thakle take oi service ta provide kore For example,
+client bollo amake ei site tar home page daw.. server sheta dbe
+
+HTTP => Hypertext Transfer Protocol. Simply, eta hocche ekta language jeta Client site ar Server site ekjon arekjon er shathe kotha bolte use kore
+HTTPS => HTTP + Encryption => jate client ar server site er moddhe kotha gula encrypted thake
+
+For example, Client server ke boltese => HTTP protocol message jeta client ar server bujhte pare
+GET /index.html HTTP/1.1            // First Line e eta bole I want to 'get' the index.html (if Home page) using http version-1.1 
+HOST: https://www.facebook.com      // second line e ache host..
+Accept Language: en-us              // Third line e client jei language ta accept korte parbe sheta bola ache.. ekhane en-us
+
+Client ei msg pathanor por Server ekhane figure out kore client dada ki bolte chacche.. tokhon she onujayi server client k abr msg er reply diye dei..
+
+Client => Server    =   HTTP Request
+Server => Client    =   HTTP Response
+
+ekhon ki response dei server?
+HTTP/1.1 200 OK             // First line e jei http version e request korsilo sheta ashe followed by a code => jetake status code bole => 200 means successful mane OK
+Date: 18 Jan 2022 19:00     // Time of the response
+Content-Type: text/html     // eta hocche server jei content ta pathaise shetar datatype. ei case e text/html
+
+        <!DOCTYPE html>
+        <html>
+            .........       // erpor ekhane html code gula ashe.. jokhon browser html document read korte pare tokhon eta construct kore DOM k => Document Object Model => eta ekta Model jeta represent kore HTML document er Object and element gulake
+
+            // Jokhon browser html document take read kore tokhon eta onnanno resource er reference gulake discover kore.. prottekta resource er abar nijossho address/url ache.. to prottekta resource er jonne browser abar oi onujayi server separate request pathai response pawar jonne (etake fetching bole). Most of these http request parallel-vabe send hoi... so that amra page gula as quickly as possible dekhte paai
+            // jokhon browser er necessary shob resource pai jai tokhon tokhon browser HTML document ta 'RENDER' hoi.. jeta amra visually dekhte pai.. Render kora mane display kora document ta.. ekta fancy word arki
+        </html>
