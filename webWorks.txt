@@ -34,3 +34,15 @@ Content-Type: text/html     // eta hocche server jei content ta pathaise shetar 
             // Jokhon browser html document take read kore tokhon eta onnanno resource er reference gulake discover kore.. prottekta resource er abar nijossho address/url ache.. to prottekta resource er jonne browser abar oi onujayi server separate request pathai response pawar jonne (etake fetching bole). Most of these http request parallel-vabe send hoi... so that amra page gula as quickly as possible dekhte paai
             // jokhon browser er necessary shob resource pai jai tokhon tokhon browser HTML document ta 'RENDER' hoi.. jeta amra visually dekhte pai.. Render kora mane display kora document ta.. ekta fancy word arki
         </html>
+
+
+        High level,
+Single Threated 
+Garbage Collector 
+Interpreted 
+JIT Compiled
+Prototype Based
+Multi Paradigm
+Dynamic 
+Non-Blocking
+Event Loop

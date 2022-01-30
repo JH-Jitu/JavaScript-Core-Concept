@@ -10,3 +10,16 @@ body {
   align-content: center;
   background-color: rgb(235, 243, 245);
 }
+
+.flex-items {
+  /* flex grow by-default 0 dewa thake.. tobe 1 dile tokhon screen fill up kore nei over-flow na kore... */
+  flex-grow: 1;
+
+  /* flex shrink by default 1 thake jate choto korle flex-item gulao choto hoe jai... tobe jodi 0 kore di, tahole display choto korleo item choto hobena.. fole over-flow korbe */
+  flex-shrink: 0;
+
+  /* flex-basis onekta min-width er moto.. tobe flex-basis responsive er jonne best, karon flex-basis jodi suppose 200 px di ar amar display jodi tar theke choto hoi.. she auto amr item gulake 200px theke choto kore display te fit kore dbe.. but jodi min-width di tokhon over-flow korbe.. */
+  flex-basis: 200px;
+
+  /* flex: [flex-grow] [flex-shrink] [flex-basis]; => 3ta jinish ekshathe korar jonne => tokhon ogula display flex jekhane korechi shekhane likhte hobe */
+}
